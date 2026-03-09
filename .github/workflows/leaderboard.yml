@@ -1,0 +1,52 @@
+name: Contributions Leaderboard
+
+on:
+  # Run every day at 02:00 UTC
+  schedule:
+    - cron: '0 2 * * *'
+  # Also allow manual triggering and trigger on push to main/master
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  leaderboard:
+    name: Generate Leaderboard
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # needed to commit & push LEADERBOARD.md
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Use a token with org-wide read access so we can query all repos.
+          # Fall back to the built-in GITHUB_TOKEN for single-repo usage.
+          token: ${{ secrets.LEADERBOARD_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate leaderboard
+        env:
+          GITHUB_TOKEN: ${{ secrets.LEADERBOARD_TOKEN || secrets.GITHUB_TOKEN }}
+          ORG: ReactSphere
+          OUTPUT_FILE: LEADERBOARD.md
+        run: node .github/scripts/generate-leaderboard.js
+
+      - name: Commit and push LEADERBOARD.md
+        run: |
+          git config --global user.name  "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add LEADERBOARD.md
+          if git diff --cached --quiet; then
+            echo "No changes to LEADERBOARD.md – nothing to commit."
+          else
+            git commit -m "chore: update contributions leaderboard [skip ci]"
+            git push
+          fi
