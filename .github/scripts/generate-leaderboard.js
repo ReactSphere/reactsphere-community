@@ -25,6 +25,19 @@ const fs = require('fs');
 // ---------------------------------------------------------------------------
 // Configuration
 // ---------------------------------------------------------------------------
+// Ignore bots and AI agents
+function isIgnoredUser(login) {
+  if (!login) return true;
+
+  // ignore github bots
+  if (login.endsWith("[bot]")) return true;
+
+  // ignore AI agents
+  const ignored = ["Copilot"];
+  if (ignored.includes(login)) return true;
+
+  return false;
+}
 const ORG = process.env.ORG || 'ReactSphere';
 const TOKEN = process.env.GITHUB_TOKEN;
 const OUTPUT_FILE = process.env.OUTPUT_FILE || 'LEADERBOARD.md';
@@ -217,6 +230,10 @@ async function fetchDocCommits(repo) {
 // ---------------------------------------------------------------------------
 
 function ensureUser(map, login, avatarUrl) {
+
+  // 🚫 Skip bots and AI
+  if (isIgnoredUser(login)) return;
+
   if (!map[login]) {
     map[login] = {
       login,
@@ -228,7 +245,7 @@ function ensureUser(map, login, avatarUrl) {
       documentation: 0,
     };
   }
-  // Keep the avatar URL if we discover it later
+
   if (avatarUrl && map[login].avatarUrl.endsWith('.png')) {
     map[login].avatarUrl = avatarUrl;
   }
