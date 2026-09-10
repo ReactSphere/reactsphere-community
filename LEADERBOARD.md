@@ -1,6 +1,6 @@
 # 🏆 Contributions Leaderboard
 
-> Last updated: 2026-09-09
+> Last updated: 2026-09-10
 
 | Rank | Avatar | Username | Total | Commits | Pull Requests | Issues | Reviews | Docs |
 |------|--------|----------|------:|--------:|--------------:|-------:|--------:|-----:|
@@ -16,9 +16,10 @@
 | 10. | <img src="https://avatars.githubusercontent.com/u/74386189?v=4" width="32" height="32" alt="ajm19826" /> | [@ajm19826](https://github.com/ajm19826) | **2** | 1 | 0 | 0 | 0 | 1 |
 | 11. | <img src="https://avatars.githubusercontent.com/u/8755484?v=4" width="32" height="32" alt="kriptoburak" /> | [@kriptoburak](https://github.com/kriptoburak) | **2** | 1 | 0 | 0 | 0 | 1 |
 | 12. | <img src="https://avatars.githubusercontent.com/u/188927433?v=4" width="32" height="32" alt="Cgun-art" /> | [@Cgun-art](https://github.com/Cgun-art) | **1** | 0 | 0 | 1 | 0 | 0 |
-| 13. | <img src="https://avatars.githubusercontent.com/u/306173169?v=4" width="32" height="32" alt="raha-ak" /> | [@raha-ak](https://github.com/raha-ak) | **1** | 0 | 1 | 0 | 0 | 0 |
-| 14. | <img src="https://avatars.githubusercontent.com/u/33540416?v=4" width="32" height="32" alt="LogicMason5" /> | [@LogicMason5](https://github.com/LogicMason5) | **1** | 0 | 0 | 1 | 0 | 0 |
-| 15. | <img src="https://avatars.githubusercontent.com/u/277070735?v=4" width="32" height="32" alt="EimanTahir027" /> | [@EimanTahir027](https://github.com/EimanTahir027) | **1** | 0 | 0 | 1 | 0 | 0 |
-| 16. | <img src="https://avatars.githubusercontent.com/u/308216451?v=4" width="32" height="32" alt="tancoai" /> | [@tancoai](https://github.com/tancoai) | **1** | 0 | 0 | 1 | 0 | 0 |
+| 13. | <img src="https://avatars.githubusercontent.com/u/170360466?v=4" width="32" height="32" alt="qasimio" /> | [@qasimio](https://github.com/qasimio) | **1** | 0 | 1 | 0 | 0 | 0 |
+| 14. | <img src="https://avatars.githubusercontent.com/u/306173169?v=4" width="32" height="32" alt="raha-ak" /> | [@raha-ak](https://github.com/raha-ak) | **1** | 0 | 1 | 0 | 0 | 0 |
+| 15. | <img src="https://avatars.githubusercontent.com/u/33540416?v=4" width="32" height="32" alt="LogicMason5" /> | [@LogicMason5](https://github.com/LogicMason5) | **1** | 0 | 0 | 1 | 0 | 0 |
+| 16. | <img src="https://avatars.githubusercontent.com/u/277070735?v=4" width="32" height="32" alt="EimanTahir027" /> | [@EimanTahir027](https://github.com/EimanTahir027) | **1** | 0 | 0 | 1 | 0 | 0 |
+| 17. | <img src="https://avatars.githubusercontent.com/u/308216451?v=4" width="32" height="32" alt="tancoai" /> | [@tancoai](https://github.com/tancoai) | **1** | 0 | 0 | 1 | 0 | 0 |
 
 _Generated automatically by the [leaderboard workflow](.github/workflows/leaderboard.yml)._
